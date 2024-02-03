@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.mustafauyar.navigationkotlin.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
@@ -26,6 +27,10 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.button2.setOnClickListener {
+            val action = SecondFragmentDirections.actionSecondFragmentToFirstFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
     }
 }
