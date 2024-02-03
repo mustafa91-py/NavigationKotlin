@@ -27,6 +27,10 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        arguments?.let {
+            val kullaniciAdi = SecondFragmentArgs.fromBundle(it).username
+            binding.textView2.text = kullaniciAdi
+        }
         binding.button2.setOnClickListener {
             val action = SecondFragmentDirections.actionSecondFragmentToFirstFragment()
             Navigation.findNavController(it).navigate(action)
