@@ -29,7 +29,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // burda [FirstFragmentDirections] bu sınıfı göremiyordu çünkü gerekli paketler yüklenmemişti
         binding.button1.setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment()
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("mustafaUyar")
             Navigation.findNavController(it).navigate(action)
         }
 
