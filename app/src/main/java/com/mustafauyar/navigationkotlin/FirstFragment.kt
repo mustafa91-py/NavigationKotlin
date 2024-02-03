@@ -8,8 +8,12 @@ import android.view.ViewGroup
 import com.mustafauyar.navigationkotlin.databinding.FragmentFirstBinding
 
 
-class BlankFragment : Fragment() {
+class FirstFragment : Fragment() {
     private lateinit var binding: FragmentFirstBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,5 +26,6 @@ class BlankFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        }
     }
-}
